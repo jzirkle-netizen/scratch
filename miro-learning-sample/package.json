@@ -1,0 +1,11 @@
+{
+  "name": "api-status-dashboard-mcp",
+  "version": "1.0.0",
+  "description": "Sample app aligned with Miro's Cursor MCP tutorial (board → code).",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["miro", "sample", "dashboard"],
+  "license": "MIT"
+}

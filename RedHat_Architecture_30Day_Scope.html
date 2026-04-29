@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Hat Architecture — 30-Day Scope Outcomes</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+<style>
+  :root { --r-heading-color: #e00; --r-link-color: #c00; }
+  .reveal { font-size: 28px; }
+  .reveal h1 { font-size: 2.2em; color: #c00; }
+  .reveal h2 { font-size: 1.5em; color: #333; border-bottom: 3px solid #e00; padding-bottom: .15em; }
+  .reveal h3 { font-size: 1.15em; color: #555; }
+  .reveal table { font-size: 0.55em; margin: 0 auto; border-collapse: collapse; width: 95%; }
+  .reveal th { background: #c00; color: #fff; padding: 6px 8px; text-align: left; }
+  .reveal td { padding: 5px 8px; border-bottom: 1px solid #ddd; vertical-align: top; }
+  .reveal tr:nth-child(even) td { background: #f8f8f8; }
+  .reveal ul { font-size: 0.85em; text-align: left; }
+  .reveal li { margin-bottom: 0.35em; }
+  .reveal .subtitle { color: #666; font-size: 0.7em; margin-top: -0.3em; }
+  .reveal .tag { display: inline-block; background: #e00; color: #fff; padding: 2px 12px; border-radius: 4px; font-size: 0.6em; margin: 2px; }
+  .reveal .tag-gray { background: #555; }
+  .reveal .col-container { display: flex; gap: 24px; }
+  .reveal .col { flex: 1; text-align: left; }
+  .reveal .highlight-box { background: #fef2f2; border-left: 4px solid #e00; padding: 12px 16px; margin: 12px 0; text-align: left; font-size: 0.8em; }
+  .reveal .small { font-size: 0.7em; }
+  .slide-number { color: #999 !important; }
+  .reveal .raci-legend { font-size: 0.6em; color: #888; margin-top: 8px; }
+  .reveal .raci-legend span { margin-right: 14px; }
+  .reveal .role-card { background: #fff; border: 2px solid #ddd; border-radius: 8px; padding: 16px; margin: 8px 0; text-align: left; }
+  .reveal .role-card h3 { margin-top: 0; }
+  .reveal .role-card.red { border-color: #e00; }
+  .reveal .role-card.blue { border-color: #2563eb; }
+  .reveal .role-card.green { border-color: #16a34a; }
+  .reveal .pill { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.6em; font-weight: bold; color: #fff; margin-right: 6px; }
+  .reveal .pill-r { background: #e00; }
+  .reveal .pill-a { background: #2563eb; }
+  .reveal .pill-c { background: #f59e0b; color: #333; }
+  .reveal .pill-i { background: #6b7280; }
+  .reveal .prof-expert { color: #c00; font-weight: bold; }
+  .reveal .prof-advanced { color: #2563eb; font-weight: bold; }
+  .reveal .prof-intermediate { color: #f59e0b; font-weight: bold; }
+  .reveal .prof-basic { color: #6b7280; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ===== TITLE ===== -->
+<section>
+  <h1>Red Hat Architecture</h1>
+  <h2 style="border:none;">30-Day Scope — Outcomes</h2>
+  <p class="subtitle">RACI Matrices &bull; Role Charters &bull; Skills Matrix &bull; EA Remit</p>
+  <p class="small" style="margin-top:2em;color:#999;">Scaled Agile Framework &bull; 2026</p>
+</section>
+
+<!-- ===== AGENDA ===== -->
+<section>
+  <h2>Agenda</h2>
+  <ol>
+    <li>Architecture RACI Matrix</li>
+    <li>Role Definitions &amp; Interaction Mappings</li>
+    <li>Key Differentiators Across Roles</li>
+    <li>EA Function Remit (Services to Red Hat)</li>
+    <li>Data Architecture Discipline</li>
+    <li>Platform Architect Role</li>
+    <li>Architecture Skills Matrix</li>
+    <li>Needed Inputs for Enterprise Architecture</li>
+  </ol>
+</section>
+
+<!-- ===== RACI — Strategy & Governance ===== -->
+<section>
+  <h2>RACI Matrix — Strategy &amp; Governance</h2>
+  <table>
+    <thead>
+      <tr><th>Task / Deliverable</th><th>EA</th><th>DA</th><th>SA</th><th>BA</th><th>PdM</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Define 1–3+ Year IT Strategy &amp; North Star</strong></td><td>A / R</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+      <tr><td><strong>Create Capability Briefs &amp; Value Stream Maps</strong></td><td>C</td><td>C</td><td>I</td><td>A / R</td><td>C</td></tr>
+      <tr><td><strong>Align Architecture with OKRs &amp; Org Strategy</strong></td><td>A / R</td><td>I</td><td>I</td><td>C</td><td>C</td></tr>
+      <tr><td><strong>Define AI-Ready Architecture Principles</strong></td><td>C</td><td>A / R</td><td>C</td><td>I</td><td>I</td></tr>
+      <tr><td><strong>Data Quality, Governance &amp; Explainability</strong></td><td>R</td><td>A / R</td><td>C</td><td>I</td><td>I</td></tr>
+      <tr><td><strong>Set Enterprise Technology Radar &amp; Standards</strong></td><td>A / R</td><td>C</td><td>C</td><td>I</td><td>I</td></tr>
+    </tbody>
+  </table>
+  <div class="raci-legend">
+    <span><span class="pill pill-r">R</span> Responsible</span>
+    <span><span class="pill pill-a">A</span> Accountable</span>
+    <span><span class="pill pill-c">C</span> Consulted</span>
+    <span><span class="pill pill-i">I</span> Informed</span>
+  </div>
+</section>
+
+<!-- ===== RACI — Solution Design & Lifecycle ===== -->
+<section>
+  <h2>RACI Matrix — Solution Design &amp; Lifecycle</h2>
+  <table>
+    <thead>
+      <tr><th>Task / Deliverable</th><th>EA</th><th>DA</th><th>SA</th><th>BA</th><th>PdM</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>High-Level Technical Vision &amp; Architecture</strong></td><td>C</td><td>C</td><td>A / R</td><td>C</td><td>C</td></tr>
+      <tr><td><strong>Architectural Decision Records (ADR)</strong></td><td>C / I</td><td>I</td><td>A / R</td><td>I</td><td>I</td></tr>
+      <tr><td><strong>Conduct Proof of Concepts (POCs)</strong></td><td>C</td><td>C</td><td>A / R</td><td>I</td><td>I</td></tr>
+      <tr><td><strong>Solution Architecture Document (SAD)</strong></td><td>C</td><td>I</td><td>A / R</td><td>I</td><td>I</td></tr>
+      <tr><td><strong>Product Roadmap Prioritization</strong></td><td>C</td><td>I</td><td>C</td><td>C</td><td>A / R</td></tr>
+      <tr><td><strong>Implementation Handover Ceremony</strong></td><td>I</td><td>I</td><td>R</td><td>I</td><td>A</td></tr>
+      <tr><td><strong>Continuous Improvement Framework</strong></td><td>A / R</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+    </tbody>
+  </table>
+  <div class="raci-legend">
+    <span><span class="pill pill-r">R</span> Responsible</span>
+    <span><span class="pill pill-a">A</span> Accountable</span>
+    <span><span class="pill pill-c">C</span> Consulted</span>
+    <span><span class="pill pill-i">I</span> Informed</span>
+  </div>
+</section>
+
+<!-- ===== ROLE DEFINITIONS ===== -->
+<section>
+  <h2>Role Definitions</h2>
+  <div class="col-container">
+    <div class="col">
+      <div class="role-card red">
+        <h3>Enterprise &amp; Data Architect</h3>
+        <p class="subtitle">"The Foundation Visionary"</p>
+        <ul class="small">
+          <li>Operates at <strong>Strategy Office</strong> level</li>
+          <li>Ensures technical roadmaps enable business outcomes</li>
+          <li>Output: Technology Radar, Data Architecture standards, target-state capability roadmaps</li>
+          <li>Advisory authority on Buy vs. Build &amp; vendor alignment</li>
+          <li>AI Focus: Data quality &amp; explainability for Agentic AI</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="role-card blue">
+        <h3>Solution Architect</h3>
+        <p class="subtitle">"The Technical Visionary"</p>
+        <ul class="small">
+          <li>Operates at <strong>Portfolio &amp; Project</strong> level</li>
+          <li>Bridges BA's "what/why" → technical "how"</li>
+          <li>Output: SADs, ADRs, successful POCs</li>
+          <li>Project-specific tech choices within EA/DA guardrails</li>
+          <li>Leads Implementation Handover Ceremony</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATA ARCHITECT ROLE ===== -->
+<section>
+  <h2>Data Architect Role</h2>
+  <div class="role-card green" style="max-width:85%;margin:0 auto;">
+    <h3>Data Architect (DA)</h3>
+    <p class="subtitle">"The Information Steward"</p>
+    <ul>
+      <li><strong>Strategic Scope:</strong> Enterprise &amp; portfolio levels — defines how data is modeled, integrated, governed, and made usable across business capabilities</li>
+      <li><strong>Primary Output:</strong> Conceptual &amp; logical data models, data standards, integration patterns, target-state data flows</li>
+      <li><strong>Decision Rights:</strong> Advisory authority on data design, master data approach, integration patterns &amp; governance requirements</li>
+      <li><strong>AI Focus:</strong> Trusted data foundation for AI — data quality, lineage, interoperability, and fitness for AI-driven workflows</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== WORKFLOW INTERLOCKS ===== -->
+<section>
+  <h2>Key Workflow Interlocks</h2>
+  <div class="highlight-box">
+    <strong>Triggering Engagement:</strong> When Corporate Strategy incubates a business outcome, they notify both EA and Business Architects to determine whether the impact rises to EA or SA engagement.
+  </div>
+  <div class="highlight-box">
+    <strong>Cadence Alignment:</strong> All architecture teams operate on a <strong>10-week increment cadence</strong> to ensure synchronization with PI Planning.
+  </div>
+  <div class="highlight-box">
+    <strong>Strategic Integration:</strong> EA is being moved from a "downstream service" to an <strong>upstream partner</strong>, gaining a "seat at the table" during the investment lifecycle to prevent misaligned investments.
+  </div>
+</section>
+
+<!-- ===== KEY DIFFERENTIATORS 1 ===== -->
+<section>
+  <h2>Key Differentiators (1 of 2)</h2>
+  <table>
+    <thead>
+      <tr><th>Feature</th><th>Enterprise Architect</th><th>Solution Architect</th><th>Data Architect</th><th>Business Architect</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Scope</strong></td><td>Entire org &amp; portfolio; enterprise guardrails &amp; North Star</td><td>Specific solution/project; end-to-end technical solution</td><td>Enterprise data domains; cross-platform data ecosystem</td><td>Business capabilities &amp; value streams (CBP)</td></tr>
+      <tr><td><strong>Time Horizon</strong></td><td>1–3+ years (strategic)</td><td>3–12 months (tactical)</td><td>1–3 years (strategic to transitional)</td><td>1–3+ years (strategic to translational)</td></tr>
+      <tr><td><strong>North Star</strong></td><td>AI-ready architecture principles; reduce sprawl &amp; enable reuse</td><td>Feasible solution design meeting NFR targets</td><td>Trusted, governed, explainable data at scale</td><td>Coherent capability map realizing OKRs</td></tr>
+      <tr><td><strong>Success Metric</strong></td><td>Portfolio ROI, reduced redundancy, strategic alignment</td><td>Delivery success, system performance, technical fit</td><td>Data quality, consistency, reuse, trusted AI</td><td>Capability realization, value stream performance</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== KEY DIFFERENTIATORS 2 ===== -->
+<section>
+  <h2>Key Differentiators (2 of 2)</h2>
+  <table>
+    <thead>
+      <tr><th>Feature</th><th>Enterprise Architect</th><th>Solution Architect</th><th>Data Architect</th><th>Business Architect</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Risk Focus</strong></td><td>High: wrong platforms, misaligned bets, fragmented guardrails</td><td>Medium: wrong patterns/tools, delivery risk, tech debt</td><td>High: inconsistent entities, poor lineage, AI not explainable</td><td>Med-high: misaligned capabilities, strategy not operationalized</td></tr>
+      <tr><td><strong>Typical Meetings</strong></td><td>Strategy reviews, portfolio councils, ARB, radar sessions</td><td>PI Planning, design reviews, spike/POC reviews, handover</td><td>Governance councils, domain reviews, AI/data quality forums</td><td>Capability workshops, VSM, BA councils, OKR sessions</td></tr>
+      <tr><td><strong>Key Outputs</strong></td><td>Tech Radar, EA roadmaps, AI-ready principles, reference architectures</td><td>SADs, ADRs, POC results, runway updates</td><td>Data models, canonical entities, data standards, integration patterns</td><td>Capability briefs, VSMs, RACI maps, BDRs, CBP views</td></tr>
+      <tr><td><strong>SAFe Anchor</strong></td><td>Strategy Office, LPM, Platform/Domain architects</td><td>Bridges BA → technical; works with Product, DA, Platform</td><td>Interlocks EA, SA, BA, data governance</td><td>Engages Strategy &amp; EA; shapes CBP &amp; value streams</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== EA REMIT — STRATEGIC PARTNERSHIP ===== -->
+<section>
+  <h2>EA Remit: Strategic Partnership &amp; Governance</h2>
+  <ul>
+    <li><strong>Strategy Office Representation</strong> — Formal seat at the Strategy Office ensuring technical roadmaps enable business outcomes</li>
+    <li><strong>Investment Vetting</strong> — Technology and portfolio investments vetted against business goals before capital commitment</li>
+    <li><strong>Decision Rights Management</strong> — Advisory authority on "Buy vs. Build" and vendor roadmap alignment</li>
+    <li><strong>AI Policy &amp; Ethics</strong> — Governing AI policy, security controls, and ethical frameworks for frictionless AI production</li>
+  </ul>
+</section>
+
+<!-- ===== EA REMIT — STANDARDS ===== -->
+<section>
+  <h2>EA Remit: Standards &amp; Foundation Building</h2>
+  <ul>
+    <li><strong>Data Architecture Discipline</strong> — Standalone service for data standards, quality, stewardship, and governance</li>
+    <li><strong>AI-Ready Architecture Principles</strong> — Explainability and interoperability for scalable AI &amp; agentic workflows</li>
+    <li><strong>Technology Radar Management</strong> — Red Hat Technical Radar by function/value stream to guide technology selection</li>
+    <li><strong>Reusable Patterns</strong> — Reference architectures for common GTM scenarios (e.g., consumption pricing, AI-enabled selling)</li>
+  </ul>
+</section>
+
+<!-- ===== EA REMIT — CAPABILITY & ROADMAP ===== -->
+<section>
+  <h2>EA Remit: Capability &amp; Roadmap Design</h2>
+  <ul>
+    <li><strong>Proactive Capability Design</strong> — Shifting from reactive project delivery to proactive design anticipating future needs</li>
+    <li><strong>Strategic Roadmapping</strong> — Enterprise-level roadmaps that synthesize solution roadmaps &amp; identify non-obvious dependencies</li>
+    <li><strong>Target-State Architecture</strong> — "North Star" vision for RH's technology landscape over a 3–5 year horizon</li>
+    <li><strong>Interoperability Oversight</strong> — Seamless integration and data flow between disparate systems and platforms</li>
+  </ul>
+</section>
+
+<!-- ===== EA REMIT — PORTFOLIO ===== -->
+<section>
+  <h2>EA Remit: Portfolio &amp; Operational Excellence</h2>
+  <ul>
+    <li><strong>Architecture Review Board (ARB)</strong> — Formal approval process for architectural standards &amp; cross-portfolio alignment</li>
+    <li><strong>Portfolio Impact Assessment</strong> — Architecture impact assessments for new requests to determine validity &amp; fit</li>
+    <li><strong>Vendor Roadmap Evaluation</strong> — Vendor capability roadmaps analyzed against internal gaps</li>
+    <li><strong>Continuous Improvement Framework</strong> — Maintenance, monitoring, and feedback loops for sustained excellence</li>
+  </ul>
+</section>
+
+<!-- ===== DATA ARCHITECTURE DISCIPLINE ===== -->
+<section>
+  <h2>Data Architecture: What It Is vs. Isn't</h2>
+  <table>
+    <thead>
+      <tr><th>Feature</th><th style="background:#16a34a;">What It IS</th><th style="background:#555;">What It IS NOT</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Primary Goal</strong></td><td>Ensuring data quality, governance &amp; explainability for scalable AI</td><td>Enforcing rigid barriers that stifle AI experimentation</td></tr>
+      <tr><td><strong>Focus</strong></td><td>Managing data standards, stewardship &amp; data products</td><td>General "Enterprise Architecture" or downstream delivery</td></tr>
+      <tr><td><strong>Approach</strong></td><td>Proactively defining data architecture principles &amp; AI-ready standards</td><td>A reactive "firefighter" called in at the last minute</td></tr>
+      <tr><td><strong>Output</strong></td><td>DA documentation, Data Product Epics &amp; BDRs</td><td>A mere inventory of systems or an implementation roadmap</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== DATA & AI ARCHITECT ROLE ===== -->
+<section>
+  <h2>Data &amp; AI Architect: Role &amp; Responsibilities</h2>
+  <div class="col-container">
+    <div class="col">
+      <h3>Role Definition</h3>
+      <ul class="small">
+        <li><strong>Purpose:</strong> Create high-level technical vision &amp; data architecture achieving business goals</li>
+        <li><strong>Engagement:</strong> Triggered by BA requests → creates Epics in Jira with label "Data and AI Architecture"</li>
+        <li><strong>Interlocks:</strong> SAs, Product Owners, TOC</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Core Responsibilities</h3>
+      <ul class="small">
+        <li><strong>Standardization</strong> — Enterprise data standards</li>
+        <li><strong>AI Enablement</strong> — Platform-specific AI plans</li>
+        <li><strong>Impact Assessment</strong> — CDE &amp; EDS considerations</li>
+        <li><strong>Stewardship &amp; Quality</strong> — Governance &amp; explainability</li>
+        <li><strong>Lifecycle Mgmt</strong> — Tech decisions for data solutions</li>
+      </ul>
+    </div>
+  </div>
+  <h3 style="margin-top:0.5em;">Required Skills</h3>
+  <p class="small">
+    <span class="tag">Domain Expertise</span>
+    <span class="tag">Data Governance</span>
+    <span class="tag">Technical Proficiency</span>
+    <span class="tag">Strategic Alignment</span>
+    <span class="tag">AI Specialization</span>
+  </p>
+</section>
+
+<!-- ===== PLATFORM ARCHITECT ===== -->
+<section>
+  <h2>Platform Architect</h2>
+  <div class="role-card" style="max-width:85%;margin:0 auto;border-color:#8b5cf6;">
+    <h3 style="color:#7c3aed;">Platform Architect (Agile / DevOps context)</h3>
+    <ul>
+      <li>Operates at a <strong>platform or shared-services</strong> level</li>
+      <li>Designs &amp; evolves technical platforms (cloud, K8s, CI/CD, shared APIs, data platforms)</li>
+      <li>Focuses on infrastructure, runtime, reusable services: scalability, reliability, security, multi-tenancy, cost optimization, and developer experience</li>
+      <li>Aligns platform capabilities with EA guardrails and solution/product team needs</li>
+      <li>Does <strong>not</strong> own enterprise-wide business-technology strategy or full end-to-end solutions</li>
+    </ul>
+  </div>
+  <table style="margin-top:1em;">
+    <thead><tr><th>Aspect</th><th>Platform Architect</th></tr></thead>
+    <tbody>
+      <tr><td>Primary Level</td><td>Shared platform / infrastructure / tooling</td></tr>
+      <tr><td>Time Horizon</td><td>Medium–long term (platform evolution &amp; lifecycle)</td></tr>
+      <tr><td>Key Outputs</td><td>Platform blueprints, SLOs, platform APIs, cloud/infra patterns</td></tr>
+      <tr><td>Partners</td><td>SRE/DevOps, infra teams, EAs, SAs, security</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== SKILLS COMPARISON MATRIX ===== -->
+<section>
+  <h2>Skills Comparison Matrix</h2>
+  <table>
+    <thead>
+      <tr><th>Skill Category</th><th>EA</th><th>SA</th><th>DA</th><th>BA</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Strategic Planning</strong></td><td class="prof-expert">Expert</td><td class="prof-intermediate">Intermediate</td><td class="prof-advanced">Advanced</td><td class="prof-expert">Expert</td></tr>
+      <tr><td><strong>Technical Depth</strong></td><td class="prof-intermediate">Intermediate</td><td class="prof-expert">Expert</td><td class="prof-expert">Expert</td><td class="prof-basic">Basic</td></tr>
+      <tr><td><strong>Business Acumen</strong></td><td class="prof-advanced">Advanced</td><td class="prof-intermediate">Intermediate</td><td class="prof-intermediate">Intermediate</td><td class="prof-expert">Expert</td></tr>
+      <tr><td><strong>Governance</strong></td><td class="prof-expert">Expert</td><td class="prof-intermediate">Intermediate</td><td class="prof-expert">Expert</td><td class="prof-intermediate">Intermediate</td></tr>
+      <tr><td><strong>Architecture Frameworks</strong></td><td class="prof-expert">Expert</td><td class="prof-advanced">Advanced</td><td class="prof-advanced">Advanced</td><td class="prof-expert">Expert</td></tr>
+      <tr><td><strong>AI/ML Knowledge</strong></td><td class="prof-advanced">Advanced</td><td class="prof-intermediate">Intermediate</td><td class="prof-expert">Expert</td><td class="prof-basic">Basic</td></tr>
+      <tr><td><strong>Agile/SAFe</strong></td><td class="prof-intermediate">Intermediate</td><td class="prof-expert">Expert</td><td class="prof-intermediate">Intermediate</td><td class="prof-advanced">Advanced</td></tr>
+      <tr><td><strong>Stakeholder Mgmt</strong></td><td class="prof-expert">Expert</td><td class="prof-advanced">Advanced</td><td class="prof-advanced">Advanced</td><td class="prof-expert">Expert</td></tr>
+      <tr><td><strong>Documentation</strong></td><td class="prof-advanced">Advanced</td><td class="prof-expert">Expert</td><td class="prof-expert">Expert</td><td class="prof-expert">Expert</td></tr>
+      <tr><td><strong>Integration Design</strong></td><td class="prof-intermediate">Intermediate</td><td class="prof-expert">Expert</td><td class="prof-expert">Expert</td><td class="prof-intermediate">Intermediate</td></tr>
+    </tbody>
+  </table>
+  <p class="small" style="margin-top:8px;color:#888;">
+    <span class="prof-expert">Expert</span> = Define standards &amp; mentor &nbsp;|&nbsp;
+    <span class="prof-advanced">Advanced</span> = Independently execute &nbsp;|&nbsp;
+    <span class="prof-intermediate">Intermediate</span> = Contribute with guidance &nbsp;|&nbsp;
+    <span class="prof-basic">Basic</span> = Foundational for collaboration
+  </p>
+</section>
+
+<!-- ===== SKILLS DEV PRIORITIES ===== -->
+<section>
+  <h2>Skills Development Priorities</h2>
+  <div class="col-container" style="font-size:0.8em;">
+    <div class="col">
+      <h3 style="color:#c00;">Enterprise Architects</h3>
+      <ul class="small">
+        <li>AI governance &amp; explainability</li>
+        <li>Portfolio financial modeling &amp; ROI</li>
+        <li>Multi-cloud architecture patterns</li>
+        <li>Change leadership</li>
+      </ul>
+      <h3 style="color:#2563eb;">Solution Architects</h3>
+      <ul class="small">
+        <li>AI/ML implementation patterns</li>
+        <li>Cloud-native &amp; serverless expertise</li>
+        <li>SAFe architecture runway &amp; CD</li>
+        <li>API strategy &amp; platform architecture</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3 style="color:#16a34a;">Data Architects</h3>
+      <ul class="small">
+        <li>AI/ML pipelines &amp; feature stores</li>
+        <li>Data mesh &amp; data product mgmt</li>
+        <li>Real-time streaming &amp; EDA</li>
+        <li>Data observability &amp; DataOps</li>
+      </ul>
+      <h3 style="color:#8b5cf6;">Business Architects</h3>
+      <ul class="small">
+        <li>Value stream mapping &amp; outcomes</li>
+        <li>Tech literacy (AI, cloud, platforms)</li>
+        <li>OKR frameworks &amp; CBP roadmapping</li>
+        <li>Advanced facilitation techniques</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CROSS-ROLE COLLABORATION ===== -->
+<section>
+  <h2>Cross-Role Collaboration Skills</h2>
+  <p class="subtitle">Required for All Architecture Roles</p>
+  <div class="col-container">
+    <div class="col">
+      <ul>
+        <li>RACI framework &amp; role interaction mapping</li>
+        <li>Scaled Agile Framework (SAFe) &amp; PI Planning</li>
+        <li>JIRA: epic/story creation &amp; linking</li>
+        <li>Visual communication (Visio, Miro, Lucidchart)</li>
+      </ul>
+    </div>
+    <div class="col">
+      <ul>
+        <li>Architecture documentation standards &amp; shared taxonomy</li>
+        <li>Stakeholder mapping &amp; influence strategy</li>
+        <li>Design thinking &amp; collaborative problem-solving</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEEDED INPUTS — STRATEGY ===== -->
+<section>
+  <h2>Needed Inputs: From Corporate Strategy</h2>
+  <table>
+    <thead>
+      <tr><th>Input</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Vision, Mission &amp; Strategic Themes</strong></td><td>Clear written statements of vision, mission, strategic pillars, and multi-year goals traceable to capabilities &amp; roadmaps</td></tr>
+      <tr><td><strong>Corporate &amp; Portfolio OKRs</strong></td><td>Top-level and portfolio-level OKRs for alignment of tech roadmaps, guardrails, and enablers</td></tr>
+      <tr><td><strong>Strategic Initiatives &amp; Bets</strong></td><td>Approved/emerging initiatives including target segments, value propositions, and expected outcomes</td></tr>
+      <tr><td><strong>Operating Model &amp; Value Streams</strong></td><td>Current and target operating model so EA can map technology to where value flows</td></tr>
+      <tr><td><strong>Investment &amp; Funding Guardrails</strong></td><td>Constraints, risk appetite, "must win" areas to shape architectural runway</td></tr>
+      <tr><td><strong>Risk, Compliance &amp; Policy</strong></td><td>Risk appetite, regulatory hot spots, security &amp; AI ethics stances for EA principles</td></tr>
+      <tr><td><strong>Market &amp; Competitive Insights</strong></td><td>Trends and disruption themes informing the technology radar</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== NEEDED INPUTS — PORTFOLIO ===== -->
+<section>
+  <h2>Needed Inputs: From Portfolio Leadership</h2>
+  <table>
+    <thead>
+      <tr><th>Input</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Portfolio Backlog &amp; Roadmap</strong></td><td>Prioritized portfolio backlog and 1–3 increment roadmap so EA can time enablers &amp; platform work</td></tr>
+      <tr><td><strong>Demand Funnel &amp; Intake</strong></td><td>Visibility into new requests, steering decisions, and pipeline to decide EA engagement</td></tr>
+      <tr><td><strong>Business Cases &amp; Constraints</strong></td><td>Benefits, cost, timeline, dependencies for architecture impact assessments</td></tr>
+      <tr><td><strong>Solution &amp; Platform Landscape</strong></td><td>Key platforms, solutions in flight, tech debt hotspots, and known constraints</td></tr>
+      <tr><td><strong>Risks, Issues &amp; Dependencies</strong></td><td>Cross-program dependencies and capacity constraints for architectural options</td></tr>
+      <tr><td><strong>PI Objectives &amp; Outcomes</strong></td><td>Planned vs. actual results to refine EA roadmaps and adjust guardrails</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section>
+  <h1>Thank You</h1>
+  <h2 style="border:none;">Red Hat Architecture — 2026</h2>
+  <p style="margin-top:2em;color:#888;">Navigate with arrow keys &nbsp;|&nbsp; Press <strong>ESC</strong> for overview &nbsp;|&nbsp; Press <strong>F</strong> for fullscreen</p>
+</section>
+
+</div><!-- .slides -->
+</div><!-- .reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: 'c/t',
+  width: 1280,
+  height: 720,
+  margin: 0.08,
+  transition: 'slide',
+  center: true
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Calibri;}}
+\fs22
+Jira Work Document\par
+\par
+Generated: 2026-04-15\par
+Scope: Issues assigned to Justin Zirkle that are not Closed.\par
+\par
+Issues\par
+\par
+RHEA-4255 - Technical Architecture Workshop and 90 Day Actions Items\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4255\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: New\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-24\par
+- Updated: 2026-04-16\par
+- Due date: 2026-04-30\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q1\par
+\par
+RHEA-4243 - iACV/iARR Architecture Design\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4243\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Epic\par
+- Status: In Progress\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-24\par
+- Updated: 2026-04-15\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+RHEA-4244 - iACV/iARR Discovery\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4244\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: In Progress\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-24\par
+- Updated: 2026-04-10\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+RHEA-4248 - NVAIE/RHAIE Design\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4248\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: In Progress\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-24\par
+- Updated: 2026-04-10\par
+- Due date: None\par
+- Labels: Interrupt\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q1\par
+\par
+RHEA-4234 - EA Sprint and Capacity Management Apr\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4234\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: In Progress\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-23\par
+- Updated: 2026-04-10\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+SPT-4316 - Evaluate Impact and LOE to Move Quota Difference Calculations to OpenShift/Snowflake\par
+- URL: https://redhat.atlassian.net/browse/SPT-4316\par
+- Project: SPT (CBP Sales Planning Transformation)\par
+- Type: Spike\par
+- Status: Review\par
+- Priority: Normal\par
+- Assignee: Justin Zirkle\par
+- Reporter: Ali Cory-Smith\par
+- Created: 2026-03-11\par
+- Updated: 2026-04-08\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: None\par
+\par
+RHEA-4238 - Sales Planning Product Alignment with Salesforce\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4238\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: In Progress\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-23\par
+- Updated: 2026-04-07\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+RHEA-4254 - Technical Architecture Workshop 60 Day Action Items\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4254\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: New\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-24\par
+- Updated: 2026-04-06\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+RHEA-4253 - Technical Architecture Workshop Q2 Actions Items\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4253\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Epic\par
+- Status: In Progress\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-24\par
+- Updated: 2026-04-01\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+RHEA-4237 - Sales Planning Product Alignment with Salesforce Q2\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4237\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Epic\par
+- Status: In Progress\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-23\par
+- Updated: 2026-04-01\par
+- Due date: None\par
+- Labels: SalesPlanningCY26\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+RHEA-4233 - EA Sprint and Capacity Management Q2\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4233\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Epic\par
+- Status: In Progress\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-23\par
+- Updated: 2026-04-01\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+RHEA-4246 - NVAIE/RHEAIE Architecture Design\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4246\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Epic\par
+- Status: In Progress\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-24\par
+- Updated: 2026-04-01\par
+- Due date: None\par
+- Labels: Interrupt\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q1, PI-CY26Q2\par
+\par
+RHEA-4245 - iACV/iARR Design\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4245\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: New\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-24\par
+- Updated: 2026-04-01\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+SPT-2808 - Testing Risk: Lack of Integrated Environment Between Snowflake and RHSC for Seller Profile E2E Validation\par
+- URL: https://redhat.atlassian.net/browse/SPT-2808\par
+- Project: SPT (CBP Sales Planning Transformation)\par
+- Type: Risk\par
+- Status: New\par
+- Priority: Major\par
+- Assignee: Justin Zirkle\par
+- Reporter: Ali Cory-Smith\par
+- Created: 2025-11-18\par
+- Updated: 2026-03-26\par
+- Due date: None\par
+- Labels: mitigated, owned\par
+- Components: None\par
+- Fix versions: SellerProfileCreate\par
+\par
+SPT-2563 - (12.2) Deprecate \"Functional - Sales Planning Developer(Write)\" Permission Set and Reassign Object Access to GTM Strategy & Developer Sets\par
+- URL: https://redhat.atlassian.net/browse/SPT-2563\par
+- Project: SPT (CBP Sales Planning Transformation)\par
+- Type: Story\par
+- Status: In Progress\par
+- Priority: Major\par
+- Assignee: Justin Zirkle\par
+- Reporter: Ali Cory-Smith\par
+- Created: 2025-10-26\par
+- Updated: 2026-03-25\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: BaseTargetSetting\par
+\par
+RHEA-4239 - Sales Planning Product Alignment with Salesforce\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4239\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: New\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-23\par
+- Updated: 2026-03-06\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+RHEA-4236 - EA Sprint and Capacity Management Jun\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4236\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: New\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-23\par
+- Updated: 2026-03-06\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+RHEA-4235 - EA Sprint and Capacity Management May\par
+- URL: https://redhat.atlassian.net/browse/RHEA-4235\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Story\par
+- Status: New\par
+- Priority: Should Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2026-02-23\par
+- Updated: 2026-03-06\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: Committed, PI-CY26Q2\par
+\par
+SPT-629 - Outcome: Sales Planning Data Loads Reduced YoY\par
+- URL: https://redhat.atlassian.net/browse/SPT-629\par
+- Project: SPT (CBP Sales Planning Transformation)\par
+- Type: Epic\par
+- Status: New\par
+- Priority: Undefined\par
+- Assignee: Justin Zirkle\par
+- Reporter: Justin Zirkle\par
+- Created: 2025-04-23\par
+- Updated: 2025-12-16\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: None\par
+\par
+RHEA-2001 - Plan to Pay\par
+- URL: https://redhat.atlassian.net/browse/RHEA-2001\par
+- Project: RHEA (Enterprise Architecture)\par
+- Type: Initiative\par
+- Status: In Progress\par
+- Priority: Must Have\par
+- Assignee: Justin Zirkle\par
+- Reporter: Daryl Paul Hechanova\par
+- Created: 2023-01-19\par
+- Updated: 2025-10-13\par
+- Due date: None\par
+- Labels: None\par
+- Components: None\par
+- Fix versions: None\par
+}
