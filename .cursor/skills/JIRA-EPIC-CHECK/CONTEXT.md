@@ -8,8 +8,9 @@ Read this when the user’s prompt uses **org shorthand** instead of a Jira proj
 |--------------------------|----------------------------|
 | **Enterprise Architecture** | Jira project **`RHEA`**. When scope is “EA” or Enterprise Architecture epics, use **`project = RHEA`** (unless the user names a different key). |
 | *Enteprise Architecture* | Treat as the same intent as **Enterprise Architecture** (common typo); confirm **`RHEA`** if the project key is ambiguous. |
+| **CBP Sales Planning Transformation** | Jira project **`SPT`**. When scope refers to CBP Sales Planning Transformation, use **`project = SPT`** in JQL (unless the user names a different key). |
 
-**Any other Jira project:** use the user’s **`PROJECT_KEY`** or full epic JQL they provide. Do **not** assume `RHEA` unless context or the user says so.
+**Any other Jira project:** use the user’s **`PROJECT_KEY`** or full epic JQL they provide. Do **not** assume `RHEA` or **`SPT`** unless context or the user says so.
 
 ## Lists and code-aligned names
 
