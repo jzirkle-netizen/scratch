@@ -1,0 +1,15 @@
+# Only version these subtrees:
+#   - agentskills/          (Agent Skills / agentskills.io layout)
+#   - .cursor/skills/       (Cursor skills)
+# Everything else stays local and is not pushed to GitHub.
+
+/*
+!/agentskills/
+!/agentskills/**
+
+!/.cursor/
+/.cursor/*
+!/.cursor/skills/
+!/.cursor/skills/**
+
+!.gitignore
