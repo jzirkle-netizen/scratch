@@ -46,7 +46,7 @@ This document records a **live execution** of the **JIRA-EPIC-CHECK** / **jira-e
 
 - **Observation:** For `key = RHEA-4246` and `key = RHEA-1956`, `search_issues_by_jql` **did not include a `duedate` property** on rows even when `fields` explicitly requested **`duedate`**. JQL probes `key = RHEA-4246 AND duedate is not EMPTY` and `key = RHEA-1956 AND duedate is not EMPTY` both **returned the issue**, proving **Due date is populated** in Jira while the search row shape stays thin.
 - **Risk:** An agent might mis-score **Due date** as empty if it trusts only the search row.
-- **Fix applied (repo):** **`agentskills/jira-epic-check/references/INSTRUCTIONS.md`** step **3** (and synced **`.cursor/skills/JIRA-EPIC-CHECK/JIRA-EPIC-CHECK.md`**) now states this **MCP caveat** and requires **JQL `duedate` probes** or **`get_issue`** before scoring the Due date row.
+- **Fix applied (repo):** **[INSTRUCTIONS.md](INSTRUCTIONS.md)** step **3** (and synced **`.cursor/skills/JIRA-EPIC-CHECK/JIRA-EPIC-CHECK.md`**) now states this **MCP caveat** and requires **JQL `duedate` probes** or **`get_issue`** before scoring the Due date row.
 
 ### D — List 2 / Untouched spot check (`RHEA-1956`)
 

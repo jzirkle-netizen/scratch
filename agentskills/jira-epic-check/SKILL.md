@@ -16,5 +16,6 @@ This skill ships **only Markdown** (`.md`) under this folder: **no `scripts/`**,
 |----------|---------|
 | [references/CONTEXT.md](references/CONTEXT.md) | Org vocabulary — e.g. Enterprise Architecture ↔ project key, **Problematic JIRA** ↔ List 1, **Untouched JIRA** ↔ List 2 |
 | [references/INSTRUCTIONS.md](references/INSTRUCTIONS.md) | Runtime parameters (**`PROJECT_KEY`**, **`LIST1_DAYS`**, **`LIST2_DAYS`**), goals, workflow, checklist, MCP usage |
+| [references/evaluation.md](references/evaluation.md) | Recorded MCP smoke run, calibration checks, and post-fix status for this skill |
 
-**When to load:** Read **CONTEXT.md** if the user uses stakeholder wording; read **INSTRUCTIONS.md** before scoring (List 1 + List 2 in one run).
+**When to load:** Read **CONTEXT.md** if the user uses stakeholder wording; read **INSTRUCTIONS.md** before scoring (List 1 + List 2 in one run). Open **evaluation.md** when reviewing prior verification results.
