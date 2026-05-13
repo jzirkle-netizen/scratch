@@ -92,7 +92,7 @@ Before any JQL or scoring, pin these (ask the user if missing). For org nickname
    project = <PROJECT_KEY> AND type = Epic AND statusCategory != "Done" AND updated < -<LIST2_DAYS>d
    ```
 
-3. **Search** — `search_issues_by_jql`, `max_results` ≤ 100, `fields` e.g. `["summary", "status", "duedate", "priority", "labels", "updated", "<blocked_field_id>"]` (discover blocked field per project).
+3. **Search** — `search_issues_by_jql`, `max_results` ≤ 100, `fields` e.g. `["summary", "status", "duedate", "priority", "labels", "updated", "<blocked_field_id>"]` (discover blocked field per project). **MCP caveat:** some deployments **omit `duedate` (and other built-ins)** from each row even when listed in **`fields`** — do not assume “empty due date” from that alone. Confirm with JQL (`key = <KEY> AND duedate is EMPTY` / `is not EMPTY`) or **`get_issue`** before scoring the Due date row.
 4. **Deep pass** — **`get_issue`** when payloads omit **`duedate`**, Blocked, or narrative context. List 1 still needs step 6 child search when links are empty.
 5. **Blocked (List 1)** — per-epic pass/fail from payload; bulk JQL optional with discovered field id.
 6. **Related work (List 1)** — (1) **`get_issue_links`** ≥ 1 → pass; (2) else child JQL with **`<PROJECT_KEY>`** and **`<EPIC_KEY>`**; (3) both empty → fail. Fix JQL on **`Epic Link`** errors before failing.
