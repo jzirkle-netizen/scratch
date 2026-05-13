@@ -1,5 +1,5 @@
 ---
-name: jira-epic-mcp-check
+name: JIRA-EPIC-CHECK
 description: Finds Jira Epics in project RHEA (via user-jira-mcp-server) that simultaneously fail every applicable governance check (Due date, Blocked, missing related work — issue links **or** epic children, 90-day comment recency), plus a second list of epics with no governance-relevant activity in the last 90 days (issue `updated` and comment timestamps). Use for RHEA epic hygiene, stale epics, sprint planning, blocked epics, linked issues, or MCP-driven epic audits.
 ---
 
