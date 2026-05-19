@@ -1,11 +1,22 @@
 ---
 name: JIRA-EPIC-CHECK
-description: Finds Jira Epics in a user-specified project (or JQL scope) that simultaneously fail every applicable governance check (Due date, Blocked, missing related work — issue links or epic children, comment recency vs a configurable List 1 window), plus a second list of epics with no governance-relevant activity in a configurable List 2 window. Runtime parameters PROJECT_KEY, LIST1_DAYS, LIST2_DAYS (defaults 90/90). Use with user-jira-mcp-server.
+description: >-
+  Finds Jira Epics that fail all governance checks (List 1 / Problematic) and epics with no
+  recent activity (List 2 / Untouched) via user-jira-mcp-server. Use when the user asks for
+  epic hygiene, stale epics, sprint planning, blocked epics, linked-work checks, or
+  Problematic/Untouched JIRA lists; PROJECT_KEY and LIST1/LIST2 day windows are configurable.
 ---
 
 > **Org vocabulary:** [CONTEXT.md](CONTEXT.md) in this folder — Enterprise Architecture ↔ example Jira project, **Problematic JIRA** ↔ List 1, **Untouched JIRA** ↔ List 2.
 
-﻿# Jira epic checks (MCP)
+# Jira epic checks (MCP)
+
+## When to use
+
+- Epic governance audit (fail-all **and** stale lists) for a Jira project or custom epic JQL.
+- Org phrases like **Enterprise Architecture** or **CBP Sales Planning Transformation** (see [CONTEXT.md](CONTEXT.md)).
+
+Do **not** use for one-off Jira edits, non-epic issue types only, or without `user-jira-mcp-server`.
 
 ## Runtime parameters (resolve first)
 
